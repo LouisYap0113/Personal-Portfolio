@@ -2,13 +2,81 @@
 <html>
     <body>
         <style>
+            :root {
+                    --navlink-color:black;
+                  }
+
+
             html {
                     font-size:12px;
                  }
+
+            body {
+                    font-size:1.8rem;
+                 }
+
+            #navbar {
+                        display:flex;
+                        justify-content: flex-end;
+                        position:fixed;
+                        top:0;
+                        left:0;
+                        z-index:2;
+                        width:100%;
+                    }
+
+            .nav-link {
+                        display:inline-block;
+                        margin:0 5px 0;
+                        text-decoration: none;
+                        color:var(--navlink-color);
+                      }
+
+            #welcome-section {
+                                display:flex;
+                                flex-direction:column;
+                                justify-content:center;
+                                align-items:center;
+                                height:100vh;
+                                width:100%;
+                        
+                             }
+
         </style>
 
+        <nav id="navbar">
+            <a class="nav-link" href="#welcome-section">Home</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
         <main>
-            
+            <div id="welcome-section">
+                <img src="" alt="Profile Picture">
+                <h1>Hey I'm Louis</h1>
+                <h3>Learning to be web developer</h3>
+            </div>
+
+            <div id="projects">
+                <h1>a glance at my projects</h1>
+                <section>
+                    <a href="" target="_blank">
+                        <img src="" alt="Project 1">
+                        <h2>Tributte: Sigmund Freud</h2>
+                    </a>
+
+                    <a href="" target="_blank">
+                        <img src="" alt="Project 2">
+                        <h2>Survey: Find Your Partner</h2>
+                    </a>
+                </section>
+                <a href="" target="_blank">Show All</a>
+            </div>
+
+            <div id="contact">
+                <img src="" alt="Collaboration Picture">
+                <p>Work together? Drop me an email.</p>
+            </div>
         </main>
     </body>
 </html>
