@@ -18,11 +18,13 @@
             #navbar {
                         display:flex;
                         justify-content: flex-end;
+                        align-items: center;
                         position:fixed;
                         top:0;
                         left:0;
                         z-index:2;
                         width:100%;
+                        height:3rem;
                     }
 
             .nav-link {
@@ -39,9 +41,72 @@
                                 align-items:center;
                                 height:100vh;
                                 width:100%;
-                        
+                                margin-top:3rem;
                              }
 
+            #profilepic {
+                            max-height:60vh;
+                        }
+
+            #welcome-section h1 {
+                                    margin:0;
+                                }
+
+            #welcome-section h5 {
+                                    margin:0;
+                                    margin-bottom:5vh;
+                                }                                
+
+            #projects {
+                        min-height:100vh;
+                        height:auto;
+                        text-align:center;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                      }
+
+            #projects h1 {
+                            margin-top:5vh;
+                         }
+
+            #project-sec {
+                            display:flex;
+                            justify-content:space-around;
+                            align-items:center;
+                         }
+            
+            #project-sec a {
+                                display:inline-block;
+                           }
+
+            .project-img-style {
+                                max-width:35vw;
+                                max-height:70vh;
+                               }
+
+            #profile-link {
+                            margin-bottom:5vh;
+                          }
+
+            .project-tile {
+                            margin-top:1rem;
+                          }
+
+            #contact {
+                        min-height:100vh;
+                        height:auto;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items:center;
+                        text-align:center;
+                     }
+
+            #contactpic {
+                            max-width: 70vw;
+                            margin-top:5vh;
+                        }
         </style>
 
         <nav id="navbar">
@@ -52,30 +117,30 @@
 
         <main>
             <div id="welcome-section">
-                <img src="" alt="Profile Picture">
+                <img id="profilepic" src="https://github.com/LouisYap0113/Personal-Portfolio/blob/master/propic.jpg?raw=true" alt="Profile Picture">
                 <h1>Hey I'm Louis</h1>
-                <h3>Learning to be web developer</h3>
+                <h5>Learning to be web developer</h5>
             </div>
 
             <div id="projects">
                 <h1>a glance at my projects</h1>
-                <section>
+                <section id="project-sec">
                     <a href="" target="_blank">
-                        <img src="" alt="Project 1">
-                        <h2>Tributte: Sigmund Freud</h2>
+                        <img class="project-img-style" src="https://github.com/LouisYap0113/Personal-Portfolio/blob/master/Tribute.jpg?raw=true" alt="Project 1">
+                        <h4 class="project-tile">Tributte: Sigmund Freud</h4>
                     </a>
 
                     <a href="" target="_blank">
-                        <img src="" alt="Project 2">
-                        <h2>Survey: Find Your Partner</h2>
+                        <img class="project-img-style" src="https://raw.githubusercontent.com/LouisYap0113/Personal-Portfolio/master/Survey.jpg" alt="Project 2">
+                        <h4 class="project-tile">Survey: Find Your Partner</h4>
                     </a>
                 </section>
-                <a href="" target="_blank">Show All</a>
+                <a id="profile-link" href="" target="_blank">Show All</a>
             </div>
 
             <div id="contact">
-                <img src="" alt="Collaboration Picture">
-                <p>Work together? Drop me an email.</p>
+                <img id="contactpic" src="https://github.com/LouisYap0113/Personal-Portfolio/blob/master/collaboration.png?raw=true" alt="Collaboration Picture">
+                <p>Work together? Drop me an <a href="mailto:junhong.cfa@gmail.com">email</a>.</p>
             </div>
         </main>
     </body>
