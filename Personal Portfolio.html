@@ -9,10 +9,13 @@
 
             :root {
                     --font-color:white;
-                    --navbar-color:rgba(220, 25, 25, 0.9);
+                    --navbar-color:rgba(220, 25, 25, 1);
                     --welcome-color:#333538;
                     --project-color:#45567de7;
                     --contact-color:#36404d;
+                    --projectlinkbg:#36404d;
+                    --profilelinkbg:#36404d;
+                    --navlink-color:#45567de7;
                   }
 
 
@@ -36,10 +39,14 @@
                 color: var(--font-color);
               }
 
+            i {
+                font-family:Verdana;
+                display:inline-block;
+              }
+
             #navbar {
                         display:flex;
                         justify-content: flex-end;
-                        align-items: center;
                         position:fixed;
                         top:0;
                         left:0;
@@ -50,8 +57,15 @@
                     }
 
             .nav-link {
-                        margin:0 10px 0;
+                        padding:0 10px 0;
+                        height:100%;
+                        display:flex;
+                        align-items:center;
                       }
+
+            .nav-link:hover {
+                                background:var(--navlink-color);
+                            }
 
             #welcome-section {
                                 display:flex;
@@ -108,11 +122,43 @@
             #profile-link {
                             margin-top:3rem;
                             margin-bottom:5vh;
+                            background:var(--profilelinkbg);
+                            padding:8px 15px;
                           }
+
+            #profile-link:hover > .i3 {
+                                        transform: translate(5px);
+                                        transition: transform 0.5s;
+                                      }
 
             .project-tile {
                             margin-top:-6px;
+                            background:var(--projectlinkbg);
+                            display:flex;
+                            justify-content:center;
+                            align-items:center;
+                            height:3rem;
                           }
+            
+            .i1 {
+                    margin-right:10px;
+                    transform:translateY(-1px)
+                }
+
+            .i2 {
+                    margin-left:10px;
+                    transform:translateY(-1px)
+                }
+
+            .project-link:hover > .project-tile .i1 {
+                                                        transform: translate(10px,-1px);
+                                                        transition: transform 0.5s;
+                                                    } 
+
+            .project-link:hover > .project-tile .i2 {
+                                                        transform: translate(-10px,-1px);
+                                                        transition: transform 0.5s;
+                                                    } 
 
             #contact {
                         min-height:100vh;
@@ -154,19 +200,19 @@
             <div id="projects">
                 <h1>a glance at my projects</h1>
                 <section id="project-sec">
-                    <a href="https://codepen.io/louisyap0113/full/vYNzvpZ" target="_blank">
+                    <a class="project-link" href="https://codepen.io/louisyap0113/full/vYNzvpZ" target="_blank">
                         <img class="project-img-style" src="https://github.com/LouisYap0113/Personal-Portfolio/blob/master/Tribute.jpg?raw=true" alt="Project 1">
-                        <h5 class="project-tile">Tributte: Sigmund Freud</h5>
+                        <h5 class="project-tile"><i class="i1">></i>Tributte: Sigmund Freud<i class="i2"><</i></h5>
                     </a>
 
-                    <a href="https://codepen.io/louisyap0113/full/qBOJLYO" target="_blank">
+                    <a class="project-link" href="https://codepen.io/louisyap0113/full/qBOJLYO" target="_blank">
                         <img class="project-img-style" src="https://raw.githubusercontent.com/LouisYap0113/Personal-Portfolio/master/Survey.jpg" alt="Project 2">
-                        <h5 class="project-tile">Survey: Find Your Partner</h5>
+                        <h5 class="project-tile"><i class="i1">></i>Survey: Find Your Partner<i class="i2"><</i></h5>
                     </a>
                 </section>
 
                 <section>
-                <a id="profile-link" href="https://codepen.io/louisyap0113" target="_blank">Show All</a>
+                <a id="profile-link" href="https://codepen.io/louisyap0113" target="_blank">Show All<i class="i3">>></i></a>
                 </section>
             </div>
 
